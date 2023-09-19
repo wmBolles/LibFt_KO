@@ -35,7 +35,7 @@ Current working directory: /home/wmbolles/Desktop/script/sources/LibFt_KO$
 
 # HOW TO USE
 
-### step_1 : open tour Libft basecode folder by 
+### step_1 : open your Libft project folder by 
 ``` 
 cd libft 
 ```
