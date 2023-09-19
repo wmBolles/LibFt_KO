@@ -14,7 +14,8 @@ start_time=$(date +%s)
 
 cd pypkg && ./run && cd ..
 
-if gcc -Wall -Wextra -Werror Script.c ../ft_*.c -o Run; then
+if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
+       ../ft_strlen.c	-o Run; then
   chmod +x Run
 
   display_elapsed_time &
