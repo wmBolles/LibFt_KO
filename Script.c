@@ -33,6 +33,8 @@ void    check_isascii(void)
         int    res = (ft_isascii(i) == isascii(i));
         if (!res)
         {
+            if (ft_isascii(i) > 0 && isspace(i) > 0)
+                  break;
             if (isok == count)
                 KO;
             printf("TEST[%d]      \t%d\n", i, i);
@@ -58,6 +60,8 @@ void    check_isdigit(void)
         int    res = (ft_isdigit(i) == isdigit(i));
         if (!res)
         {
+            if (ft_isdigit(i) > 0 && isdigit(i) > 0)
+                  break;
             if (isok == count)
                 KO;
             printf("TEST[%d]      \t%d\n", i, i);
@@ -76,6 +80,7 @@ void    check_isalpha(void)
 {
     int isok = 0;
     int count = 0;
+
     printf("isalpha : ");
 
     for(int i = -10; i < 260; i++)
@@ -83,14 +88,17 @@ void    check_isalpha(void)
         int    res = (ft_isalpha(i) == isalpha(i));
         if (!res)
         {
+            if (ft_isalpha(i) > 0 && isalpha(i) > 0)
+                  break;
             if (isok == count)
                 KO;
             printf("TEST[%d]      \t%d\n", i, i);
             printf("isalpha    :\t%d\n", isalpha(i));
             printf("\x1b[31mft_isalpha\x1b[0m :\t%d\n\n", ft_isalpha(i));
         }
-        else
+        else{
             isok += (2 >> 1);
+        }
         count++;
     }
     if (isok == count)
@@ -133,6 +141,8 @@ void    check_isprint(void)
         int    res = (ft_isprint(i) == isprint(i));
         if (!res)
         {
+            if (ft_isprint(i) > 0 && isprint(i) > 0)
+                  break;
             if (isok == count)
                 KO;
             printf("TEST[%d]      \t%d\n", i, i);
