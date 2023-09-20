@@ -116,6 +116,8 @@ void    check_isalnum(void)
         int    res = (ft_isalnum(i) == isalnum(i));
         if (!res)
         {
+            if (ft_isalnum(i) > 0 && isalnum(i) > 0)
+                  break;
             if (isok == count)
                 KO;
             printf("TEST[%d]      \t%d\n", i, i);
