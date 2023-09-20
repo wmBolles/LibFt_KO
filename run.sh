@@ -10,6 +10,8 @@ display_elapsed_time() {
   echo -ne "Elapsed time: ${elapsed_time} seconds\r"
 }
 
+clear
+
 start_time=$(date +%s)
 
 cd pypkg && ./run && cd ..
