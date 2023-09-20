@@ -26,7 +26,7 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
 
   elapsed_time=$((end_time - start_time))
   echo "Total execution time: ${elapsed_time} seconds"
-  echo ""
+#  echo ""
 
   echo "$output"
 
@@ -48,4 +48,5 @@ fi
 cd fileDescriptor_functions && ./check.sh && cd ..
 
 alias run=./run.sh
+echo ""
 echo -e "${GREEN}done."

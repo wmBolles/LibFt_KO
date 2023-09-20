@@ -8,7 +8,7 @@
 #include <string.h>
 
 #define KO printf("\x1b[31mKO\x1b[0m\n\n")
-#define OK printf("OK\n")
+#define OK printf("\x1b[32mOK\n\x1b[0m")
 // prototypes
 
 
