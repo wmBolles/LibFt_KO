@@ -34,16 +34,18 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
     rm Run
   fi
 
-  if gcc -Wall -Wextra -Werror ./fileDescriptor/check_puts.c ../ft_putstr_fd.c -o puts_run; then
-    ./puts_run | cat -e
-    echo ""
-    rm puts_run
-  else
-    echo -e "${RED}Compilation of puts_run failed. Skipping.${RESET}"
-  fi
-else
-  echo -e "${RED}Compilation of Run failed. Skipping.${RESET}"
+#  if gcc -Wall -Wextra -Werror ./fileDescriptor/check_puts.c ../ft_putstr_fd.c -o puts_run; then
+#    ./puts_run | cat -e
+#    echo ""
+#    rm puts_run
+#  else
+#    echo -e "${RED}Compilation of puts_run failed. Skipping.${RESET}"
+#  fi
+#else
+#  echo -e "${RED}Compilation of Run failed. Skipping.${RESET}"
 fi
+
+cd fileDescriptor_functions && ./check.sh && cd ..
 
 alias run=./run.sh
 echo -e "${GREEN}done."
