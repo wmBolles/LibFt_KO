@@ -38,9 +38,9 @@ void    check_isascii(void)
             if (isok == count)
                 KO;
             printf("TEST[%d]      \t%d\n", i, i);
-            printf("isascii    :\t%d\n", isascii(i));
-            printf("\x1b[31mft_isascii\x1b[0m :\t%d\n\n", ft_isascii(i));
-        }
+            printf("@");
+            printf("ft_isascii  :\t%d\n\n", ft_isascii(i));
+	}
         else
             isok += (2 >> 1);
         count++;
@@ -171,9 +171,9 @@ void    check_strlen(void)
     int res2 = (strlen(tst2) == ft_strlen(tst2));
     int res3 = (strlen(tst3) == ft_strlen(tst3));
 
-    if (res1)
+    if (res1 && res2 && res3)
     {
-        OK;
+        printf("\x1b[32mOK\x1b[0m");
     }
     else{
         printf("\x1b[31mKO\n\n\x1b[0m");
@@ -222,7 +222,7 @@ void    check_itoa(void)
     size_t count = 0;
     printf("itoa : ");
 
-    for(int i = -10; i < 10000000; i++)
+    for(int i = -214; i < 7483647; i++)
     {
         int    res = (fstrstr(ft_itoa(i), itoa(i)));
         if (!res)

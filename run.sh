@@ -48,6 +48,8 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
 fi
 
 cd fileDescriptor_functions && ./check.sh && cd ..
+cd fileDescriptor_functions && ./checkchar.sh && cd ..
+
 
 alias run=./run.sh
 echo ""
