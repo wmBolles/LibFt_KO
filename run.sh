@@ -30,7 +30,7 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
   echo "Total execution time: ${elapsed_time} seconds"
 #  echo ""
 
-  echo "$output"
+	echo "$output"
 
   if [ -e "./Run" ]; then
     rm Run
