@@ -18,4 +18,3 @@ fi
 rm puts_output.txt putstr_output.txt puts putstr
 cd ..
 
-./checkchar.sh
