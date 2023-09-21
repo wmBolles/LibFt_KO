@@ -15,14 +15,11 @@ else
     cat diff
 fi
 
-#puts_output.txt putstr_output.txt
+rm puts_output.txt putstr_output.txt puts putstr
 
-cd ..
+gcc -Wall -Wextra -Werror orignal_functions/putchar.c -o putchar
+gcc -Wall -Wextra -Werror libft_test/putchar.c ../../ft_putchar_fd.c -o fd_putchar_fd
 
-gcc -Wall -Wextra -Werror orignal_functions/putchar.c -o outputs/putchar
-gcc -Wall -Wextra -Werror libft_test/putchar.c ../../ft_putchar_fd.c -o outputs/fd_putchar_fd
-
-cd outputs
 ./putchar > orputchar
 ./ft_putchar_fd > fdputchar
 
