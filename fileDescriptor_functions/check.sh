@@ -8,9 +8,9 @@ cd outputs
 ./putstr > putstr_output.txt
 
 if diff -q puts_output.txt putstr_output.txt >/dev/null; then
-    echo -e "putstr : \033[32mOK\033[0m"
+    echo -e "ft_putstr : \033[32mOK\033[0m"
 else
-    echo -e "putstr : \033[31mKO\033[0m"
+    echo -e "ft_putstr : \033[31mKO\033[0m"
     diff -q puts_output.txt putstr_output.txt > diff
     cat diff
 fi
