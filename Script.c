@@ -26,7 +26,7 @@ void    check_isascii(void)
 {
     int isok = 0;
     int count = 0;
-    printf("isascii : ");
+    printf("ft_isascii : ");
 
     for(int i = -10; i < 260; i++)
     {
@@ -53,7 +53,7 @@ void    check_isdigit(void)
 {
     int isok = 0;
     int count = 0;
-    printf("isdigit : ");
+    printf("ft_isdigit : ");
 
     for(int i = -10; i < 260; i++)
     {
@@ -81,7 +81,7 @@ void    check_isalpha(void)
     int isok = 0;
     int count = 0;
 
-    printf("isalpha : ");
+    printf("ft_isalpha : ");
 
     for(int i = -10; i < 260; i++)
     {
@@ -109,7 +109,7 @@ void    check_isalnum(void)
 {
     int isok = 0;
     int count = 0;
-    printf("isalnum : ");
+    printf("ft_isalnum : ");
 
     for(int i = -10; i < 260; i++)
     {
@@ -136,7 +136,7 @@ void    check_isprint(void)
 {
     int isok = 0;
     int count = 0;
-    printf("isprint : ");
+    printf("ft_isprint : ");
 
     for(int i = -10; i < 260; i++)
     {
@@ -165,7 +165,7 @@ void    check_strlen(void)
     char    *tst2 = "   hELLO";
     char    *tst3 = "wabolles\0stop here!";
 
-    printf("strlen : ");
+    printf("ft_strlen : ");
 
     int res1 = (strlen(tst1) == ft_strlen(tst1));
     int res2 = (strlen(tst2) == ft_strlen(tst2));
@@ -220,7 +220,7 @@ void    check_itoa(void)
 {
     size_t isok = 0;
     size_t count = 0;
-    printf("itoa : ");
+    printf("ft_itoa : ");
 
     for(int i = -214; i < 7483647; i++)
     {
@@ -251,7 +251,7 @@ void    check_atoi(void)
     char    *check5 = "          +1337";
     char    *check6 = "          1337";
 
-    printf("atoi : ");
+    printf("ft_atoi : ");
     
     int res1 = (atoi(check1) == ft_atoi(check1));
     int res2 = (atoi(check2) == ft_atoi(check2));
