@@ -13,7 +13,6 @@ display_elapsed_time() {
 clear
 
 start_time=$(date +%s)
-
 cd pypkg && ./run && cd ..
 
 if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
@@ -28,7 +27,7 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
 
   elapsed_time=$((end_time - start_time))
   echo "Total execution time: ${elapsed_time} seconds"
-#  echo ""
+  echo ""
 
 	echo "$output"
 
@@ -53,4 +52,4 @@ cd fileDescriptor_functions && ./checkchar.sh && cd ..
 
 alias run=./run.sh
 echo ""
-echo -e "${GREEN}done."
+echo -e "${GREEN}Done."
