@@ -10,9 +10,9 @@ gcc -Wall -Wextra -Werror ../orignal_functions/putnbr.c -o putnbr.out
 if diff -q  orputnbr fdputnbr >/dev/null; then
     echo -e "ft_putnbr : \033[32mOK\033[0m"
 else
-    echo -e "ft_putnbr : \033[31mKO\033[0m"
-    diff orputchar fdputchar > outputs/diff_putchar_fd
-    cat diff_putchar_fd
+    echo -e "\033[31mft_putnbr\033[0m : \033[31mKO\033[0m"
+    diff orputnbr fdputnbr > ../errnbr
+    echo -e "\033[31mCheck errnbr file! and fix your function\033[0m"
 fi
 
 ./clean.sh
