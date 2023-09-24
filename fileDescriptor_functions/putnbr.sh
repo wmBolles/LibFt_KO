@@ -13,6 +13,7 @@ else
     echo -e "ft_putnbr : \033[31mKO\033[0m"
     diff orputchar fdputchar > outputs/diff_putchar_fd
     cat diff_putchar_fd
-
 fi
+
+./clean.sh
 cd ..
