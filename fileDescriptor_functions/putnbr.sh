@@ -11,8 +11,8 @@ if diff -q  orputnbr fdputnbr >/dev/null; then
     echo -e "ft_putnbr : \033[32mOK\033[0m"
 else
     echo -e "\033[31mft_putnbr\033[0m : \033[31mKO\033[0m"
-    diff orputnbr fdputnbr > ../errnbr
-    echo -e "\033[31mCheck errnbr file! and fix your function\033[0m"
+    diff orputnbr fdputnbr > ../traces/putnbr.diff
+    echo -e "\033[31mCheck the Traces! and fix your function\033[0m"
 fi
 
 ./clean.sh
