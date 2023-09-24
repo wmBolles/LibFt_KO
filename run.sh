@@ -29,18 +29,25 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
   echo  -e "Total execution time: \033[31m${elapsed_time}\033[0m secounds"
   echo ""
 
-  if !(gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c ../ft_strlen.c ); then
-  echo -e "${RED}Compilation failed. Exiting...${RESET}";
-  ./Run && rm Run
-  echo ""
-  if [ "$1" == "checkerr" ]; then
-    echo -e "${GREEN}Checking for errors...${RESET}"
-    gcc -Wall -Wextra -Werror ../ft_*.c
-  fi
-  exit 1
-
+if [ $? -eq 1 ]; then
+    echo -e "${RED}Compilation failed. Exiting...${RESET}"
+    echo "Fix Your Functions before run The Script"
+    echo -e "To see Where is The Error Enter ${GREEN}checkerr${RESET} after ./run.sh"
+    echo ""
+    check=1
+    if [ "$1" == 'checkerr' ]; then
+        gcc -Wall -Wextra -Werror ../ft_*.c
+	echo ""
+	exit 1;
+    else
+	    ./Run
+	    echo ""
+        exit 1;
+    fi
 fi
-	echo "$output"
+
+
+echo "$output"
 
   if [ -e "./Run" ]; then
     rm Run
@@ -62,10 +69,10 @@ cd fileDescriptor_functions && ./checkchar.sh && cd ..
 cd fileDescriptor_functions && ./putnbr.sh && cd ..
 
 echo ""
-echo "norminette test : "
 echo ""
 
 if [ "$1" == "norm" ]; then
+	echo "norminette : "
 	norminette ../ft_*.c ../libft.h
 else
 	echo -e "${GREEN}To see The norm tests enter ${RESET}\"norm\"${GREEN} after ./run.sh${RESET}"
