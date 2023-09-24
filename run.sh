@@ -29,6 +29,17 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
   echo  -e "Total execution time: \033[31m${elapsed_time}\033[0m secounds"
   echo ""
 
+if [ $? -eq 0 ]; then
+  echo -e "${RED}Compilation failed. Exiting...${RESET}";
+  ./Run && rm Run
+  echo ""
+  if [ "$1" == "checkerr" ]; then
+    echo "${GREEN}Checking for errors...${RESET}"
+    gcc -Wall -Wextra -Werror ../ft_*.c
+  fi
+  exit 1
+
+fi
 	echo "$output"
 
   if [ -e "./Run" ]; then
@@ -54,7 +65,9 @@ echo ""
 echo "norminette test : "
 echo ""
 
-norminette ../ft_*.c ../libft.h
+if [ "$1" == "norm" || "$2" == "norm" ]; then
+	norminette ../ft_*.c ../libft.h
+fi
 
 alias run=./run.sh
 echo ""
