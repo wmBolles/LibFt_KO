@@ -26,7 +26,7 @@ if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
   kill %1
 
   elapsed_time=$((end_time - start_time))
-  echo "Total execution time: ${elapsed_time} seconds"
+  echo  -e "Total execution time: \033[31m${elapsed_time}\033[0m secounds"
   echo ""
 
 	echo "$output"
@@ -48,7 +48,13 @@ fi
 
 cd fileDescriptor_functions && ./check.sh && cd ..
 cd fileDescriptor_functions && ./checkchar.sh && cd ..
+cd fileDescriptor_functions && ./putnbr.sh && cd ..
 
+echo ""
+echo "norminette test : "
+echo ""
+
+norminette ../ft_*.c ../libft.h
 
 alias run=./run.sh
 echo ""
