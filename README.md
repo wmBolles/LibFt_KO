@@ -17,19 +17,18 @@ Sample Test Results:
 |     | ###### \___ \______ | #       \ #     #  #   ###       |
 |     \______/              \__/       \_#    wm___bolles      |
 \\____________________________________________________________//
-Total execution time: 2 seconds
+Total execution time: 2 secounds
 
-itoa : OK
-atoi : OK
-isascii : OK
-isdigit : OK
-isalnum : OK
-isprint : OK
-isalpha : OK
-strlen : OK
-putstr : KO : Success
-Error opening comparison files: No such file or directory
-Current working directory: /home/wmbolles/Desktop/script/sources/LibFt_KO$
+Compilation failed. Exiting...      /Fix the code before Run The Script
+ft_itoa : OK
+ft_atoi : OK
+ft_isascii : OK
+ft_isdigit : OK
+ft_isalnum : OK
+ft_isprint : OK
+ft_isalpha : OK
+ft_strlen : OK
+
 ```
 <h5>Use this script to ensure the correctness and reliability of your "libft" library functions.</h5>
 
