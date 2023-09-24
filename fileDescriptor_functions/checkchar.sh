@@ -13,8 +13,7 @@ if diff -q  orputchar fdputchar >/dev/null; then
 else
     echo -e "ft_putchar : \033[31mKO\033[0m"
     diff orputchar fdputchar > ../traces/diff_putchar_fd
-    cat ../traces/diff_putchar_fd
-
+	echo "\033[31mCheck The Traces! and Fix Your Code\033[30m"
 fi
 rm orputchar fdputchar putchar ft_putchar_fd
 
