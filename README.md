@@ -28,7 +28,11 @@ ft_isalnum : OK
 ft_isprint : OK
 ft_isalpha : OK
 ft_strlen : OK
-
+```
+### argements 
+```
+./run.sh norm // to display all norminette tests
+./run.sh checkerr // in the case of gcc errors
 ```
 <h5>Use this script to ensure the correctness and reliability of your "libft" library functions.</h5>
 
