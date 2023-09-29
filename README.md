@@ -5,7 +5,7 @@ Libft_KO is a testing script for the "libft" library functions. It performs rigo
 - `OK`: The function has passed the test.
 - `KO`: The function has not passed the test.
 
-Sample Test Results:
+## Sample OK Test Results:
 ```
   ____________________________________________________________
 //     _       _     _       _____                            \\
@@ -19,16 +19,64 @@ Sample Test Results:
 \\____________________________________________________________//
 Total execution time: 2 secounds
 
-Compilation failed. Exiting...      /Fix the code before Run The Script
-ft_itoa : OK
 ft_atoi : OK
+ft_itoa : OK
 ft_isascii : OK
 ft_isdigit : OK
 ft_isalnum : OK
 ft_isprint : OK
 ft_isalpha : OK
 ft_strlen : OK
+ft_putstr : OK
+ft_putchar : OK
+ft_putnbr : OK
+ft_putendl : OK
+
+
+To see The norm tests enter "norm" after ./run.sh
+
+Done.
 ```
+## Sample KO Test Results:
+```
+  ____________________________________________________________
+//     _       _     _       _____                            \\
+|     / #     / $   / #     / ####### _                        |
+|     | #     | #   | #     | #      / #      #  #   ###       |
+|     | #     | #   | ####  | ##### | ###     # #   #   #      |
+|     | #     | #   | #   # | #      | # _____##____#__ #      |
+|     | #     |  #  | ##### | #      | #      # #   #   #      |
+|     | ###### \___ \______ | #       \ #     #  #   ###       |
+|     \______/              \__/       \_#    wm___bolles      |
+\\____________________________________________________________//
+Total execution time: 2 secounds
+
+ft_atoi : KO
+
+Test4   :	          -1337
+atoi    :	-1337
+ft_atoi :	0
+
+Test5   :	          +1337
+atoi    :	1337
+ft_atoi :	0
+
+Test6   :	          1337
+atoi    :	1337
+ft_atoi :	0
+
+ft_itoa : OK
+ft_isascii : OK
+ft_isdigit : OK
+ft_isalnum : OK
+ft_isprint : OK
+ft_isalpha : OK
+ft_strlen : OK
+ft_putstr : OK
+ft_putchar : OK
+
+```
+
 ### argements 
 ```
 ./run.sh norm // to display all norminette tests
@@ -65,7 +113,7 @@ cd Libft_KO
 
 # Functions
 ```
-ft_isalnum.c  ft_isascii.c  ft_isprint.c  ft_putstr_fd.c  libft.h
+ft_isalnum.c  ft_isascii.c  ft_isprint.c  ft_putstr_fd.c  ft_*_fd.c
 ft_atoi.c     ft_isalpha.c  ft_isdigit.c  ft_itoa.c       ft_strlen.c
 ```
 ## we work every day to add all functions tests...
