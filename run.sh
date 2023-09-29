@@ -15,6 +15,13 @@ clear
 start_time=$(date +%s)
 cd pypkg && ./run && cd ..
 
+if [ "$1" == "checkerr" ]; then
+    if [ $? -eq 1 ]; then
+        gcc -Wall -Wextra -Werror ../ft_*.c
+        exit 1
+    fi
+fi
+
 if gcc -Wall -Wextra -Werror Script.c ../ft_is*.c ../ft_atoi.c ../ft_itoa.c \
        ../ft_strlen.c  -o Run; then
   chmod +x Run
