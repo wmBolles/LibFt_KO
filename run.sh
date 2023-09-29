@@ -67,6 +67,7 @@ fi
 cd fileDescriptor_functions && ./check.sh && cd ..
 cd fileDescriptor_functions && ./checkchar.sh && cd ..
 cd fileDescriptor_functions && ./putnbr.sh && cd ..
+cd fileDescriptor_functions && ./endl.sh && cd ..
 
 echo ""
 echo ""
