@@ -9,6 +9,7 @@ void    check_isalpha(void);
 void    check_isalnum(void);
 void    check_isprint(void);
 void    check_strlen(void);
+void	check_tolower(void);
 
 int     main(void)
 {  
@@ -20,6 +21,23 @@ int     main(void)
     check_isprint();
     check_isalpha();
     check_strlen();
+    check_tolower();
+}
+
+void	check_tolower(void)
+{
+	int	count = 0;
+	printf("\nft_tolower: ");
+	for (int i = 0; i <= 255; i++)
+	{
+		if (ft_tolower(i) != tolower(i))
+			break;
+		count++;
+	}
+	if (count == 256)
+		OK;
+	else
+		KO;
 }
 
 void    check_isascii(void)
