@@ -12,8 +12,8 @@ void    check_strlen(void);
 
 int     main(void)
 {  
-    check_itoa();
     check_atoi();
+    check_itoa();
     check_isascii();
     check_isdigit();
     check_isalnum();
